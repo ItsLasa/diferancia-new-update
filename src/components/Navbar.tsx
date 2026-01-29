@@ -11,7 +11,7 @@ export const Navbar = (): JSX.Element => {
 
   const navItems = [
     { label: "HOME", href: "/" },
-    { label: "ABOUT US", href: "#" },
+    { label: "ABOUT US", href: "/about" },
     {
       label: "DESTINATIONS",
       href: "/destinations",
