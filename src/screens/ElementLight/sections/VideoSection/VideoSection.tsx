@@ -26,7 +26,7 @@ export const VideoSection = (): JSX.Element => {
       <div className="grid lg:grid-cols-2 gap-12 items-center">
         {/* Text */}
         <div>
-          <h2 className="text-4xl md:text-3xl [font-family:'Montez',Helvetica] mb-4">
+          <h2 className="text-4xl md:text-3xl  mb-4">
             {videos[0].title}
           </h2>
           <p className="[font-family:'Manrope',Helvetica] font-normal text-[#767676] text-sm md:text-base tracking-[0] leading-relaxed transition-transform duration-300 hover:-translate-x-1">
@@ -79,7 +79,7 @@ export const VideoSection = (): JSX.Element => {
 
         {/* Text */}
         <div className="order-1 lg:order-2">
-          <h2 className="text-4xl [font-family:'Montez',Helvetica] md:text-3xl  mb-4">
+          <h2 className="text-4xl  md:text-3xl  mb-4">
             {videos[1].title}
           </h2>
           <p className="[font-family:'Manrope',Helvetica] font-normal text-[#767676] text-sm md:text-base tracking-[0] leading-relaxed  transition-transform duration-300 hover:-translate-x-1">
