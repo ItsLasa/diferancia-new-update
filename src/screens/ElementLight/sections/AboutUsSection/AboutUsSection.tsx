@@ -62,7 +62,7 @@ export const AboutUsSection = (): JSX.Element => {
         <div className="flex flex-col w-full lg:w-1/2 items-start">
           <div className="relative w-full">
             <div className="flex flex-col items-start mb-6">
-              <h2 className="[font-family:'Montez',Helvetica] font-normal text-[#3cb371] text-2xl md:text-3xl lg:text-[32px] tracking-[0] leading-tight">
+              <h2 className=" font-normal text-[#3cb371] text-2xl md:text-3xl lg:text-[32px] tracking-[0] leading-tight">
                 Welcome To Diferancia Tours!
               </h2>
             </div>
