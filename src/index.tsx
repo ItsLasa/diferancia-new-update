@@ -10,6 +10,8 @@ import { ContactPage } from "./pages/ContactPage";
 import { ChevronUpIcon } from "lucide-react";
 import { Button } from "./components/ui/button";
 import { useState, useEffect } from "react";
+import { Outbound } from "./pages/Outbound";
+import { Inbound } from "./pages/Inbound";
 
 const App = (): JSX.Element => {
   const [showScroll, setShowScroll] = useState(false);
@@ -37,6 +39,8 @@ const App = (): JSX.Element => {
           <Route path="/destinations" element={<DestinationsPage />} />
           <Route path="/packages" element={<PackagesPage />} />
           <Route path="/contact" element={<ContactPage />} />
+            <Route path="/outbound" element={<Outbound />} />
+              <Route path="/inbound" element={<Inbound/>} />
         </Routes>
 
         {showScroll && (
