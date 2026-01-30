@@ -32,7 +32,7 @@ export const FoodExperienceSection = (): JSX.Element => {
         <header className="flex flex-wrap items-start justify-center w-full">
           <div className="flex flex-col w-full items-center pt-0 md:pt-6 lg:pt-12 pb-0 px-3">
             <div className="flex flex-col items-center pt-0 pb-1 px-0 w-full">
-              <h2 className="[font-family:'Montez',Helvetica] font-normal text-black text-2xl md:text-3xl lg:text-[32px] text-center tracking-[0] leading-tight">
+              <h2 className=" font-normal text-black text-2xl md:text-3xl lg:text-[32px] text-center tracking-[0] leading-tight">
                 Food &amp; Dining In Sri Lanka
               </h2>
             </div>
