@@ -22,8 +22,8 @@ export const Navbar = (): JSX.Element => {
        
       ],
     },
-    { label: "PACKAGES", href: "#" },
-    { label: "CONTACT US", href: "#" },
+    { label: "PACKAGES", href: "/packages" },
+    { label: "CONTACT US", href: "/contact" },
   ];
 
   const isActive = (href: string) => {
