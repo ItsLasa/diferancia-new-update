@@ -47,7 +47,7 @@ export const DestinationsOverviewSection = (): JSX.Element => {
         <div className="flex flex-wrap items-start justify-center w-full">
           <div className="flex flex-col w-full items-center px-3 py-0">
             <div className="flex flex-col items-center pt-0 pb-1 px-0 w-full">
-              <h2 className="font-normal text-[#3cb371] text-2xl md:text-3xl lg:text-[32px] text-center tracking-[0] leading-tight">
+              <h2 className="font-normal text-white text-2xl md:text-3xl lg:text-[42px] text-center tracking-[0] leading-tight">
                 Experiences In Sri Lanka
               </h2>
             </div>
