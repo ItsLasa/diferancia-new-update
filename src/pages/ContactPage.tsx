@@ -2,6 +2,14 @@ import { useState } from "react";
 import { FooterSection } from "../screens/ElementLight/sections/FooterSection";
 import { Button } from "../components/ui/button";
 import { MapPin, Phone, Mail, Clock } from "lucide-react";
+import { Navbar } from "../components/Navbar";
+import { PageHeader } from "../components/PageHeader";
+
+interface ContactInfo {
+  icon: React.ReactNode;
+  title: string;
+  value: string;
+}
 
 export const ContactPage = (): JSX.Element => {
   const [formData, setFormData] = useState({
@@ -35,181 +43,217 @@ export const ContactPage = (): JSX.Element => {
     alert("Thank you for your message! We'll get back to you soon.");
   };
 
-  const contactInfo = [
+
+
+  const contactInfo: ContactInfo[] = [
     {
-      icon: MapPin,
-      title: "Address",
-      details: "123 Travel Street, Adventure City, AC 12345",
+      icon: <MapPin className="w-6 h-6 text-green-500" />,
+      title: "Location",
+      value: "No. 15/1/C, New Digana Road, Kundasale, Kandy, Sri Lanka",
     },
     {
-      icon: Phone,
+      icon: <Phone className="w-6 h-6 text-green-500" />,
       title: "Phone",
-      details: "+1 (555) 123-4567",
+      value: "+94 77 225 0223",
     },
     {
-      icon: Mail,
+      icon: <Mail className="w-6 h-6 text-green-500" />,
       title: "Email",
-      details: "info@diferanciatours.com",
+      value: "support@diferanciatours.com",
     },
-    {
-      icon: Clock,
-      title: "Hours",
-      details: "Mon-Fri: 9AM-6PM, Sat: 10AM-4PM, Sun: Closed",
-    },
+
   ];
 
   return (
-    <div className="bg-white w-full pt-28 md:pt-32">
-      <section className="w-full px-4 sm:px-6 md:px-12 lg:px-20 py-12 md:py-20">
-        <div className="max-w-6xl mx-auto">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#161920] mb-4">
-            Get In Touch
-          </h1>
-          <p className="text-lg text-[#555555] mb-12 max-w-2xl">
-            Have questions about our destinations or packages? We'd love to hear from you. Reach out to our team
-            and we'll be happy to help plan your next adventure.
-          </p>
+    <div className="bg-white w-full ">
+      <Navbar />
+      <PageHeader
+        title="Packages"
+        breadcrumbs={[
+          { label: "Home", href: "/" },
+          { label: "Packages" },
+        ]}
+        backgroundImage="https://www.diferanciatours.com/assets/img/bg-img/127.jpg"
+      />
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
-            {contactInfo.map((info, index) => {
-              const Icon = info.icon;
-              return (
-                <div key={index} className="p-6 bg-[#f9f9f9] rounded-xl hover:shadow-lg transition-shadow">
-                  <Icon className="w-8 h-8 text-[#3cb371] mb-4" />
-                  <h3 className="font-bold text-[#161920] mb-2">{info.title}</h3>
-                  <p className="text-[#555555] text-sm">{info.details}</p>
-                </div>
-              );
-            })}
-          </div>
-
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            <form onSubmit={handleSubmit} className="space-y-6">
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                <div>
-                  <label className="block text-sm font-semibold text-[#161920] mb-2">
-                    Full Name
-                  </label>
-                  <input
-                    type="text"
-                    name="name"
-                    value={formData.name}
-                    onChange={handleChange}
-                    required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-[#3cb371] transition-colors"
-                    placeholder="John Doe"
-                  />
-                </div>
-                <div>
-                  <label className="block text-sm font-semibold text-[#161920] mb-2">
-                    Email
-                  </label>
-                  <input
-                    type="email"
-                    name="email"
-                    value={formData.email}
-                    onChange={handleChange}
-                    required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-[#3cb371] transition-colors"
-                    placeholder="john@example.com"
-                  />
-                </div>
-              </div>
-
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                <div>
-                  <label className="block text-sm font-semibold text-[#161920] mb-2">
-                    Phone
-                  </label>
-                  <input
-                    type="tel"
-                    name="phone"
-                    value={formData.phone}
-                    onChange={handleChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-[#3cb371] transition-colors"
-                    placeholder="+1 (555) 123-4567"
-                  />
-                </div>
-                <div>
-                  <label className="block text-sm font-semibold text-[#161920] mb-2">
-                    Subject
-                  </label>
-                  <select
-                    name="subject"
-                    value={formData.subject}
-                    onChange={handleChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-[#3cb371] transition-colors"
-                  >
-                    <option value="">Select subject</option>
-                    <option value="inquiry">General Inquiry</option>
-                    <option value="booking">Booking Help</option>
-                    <option value="custom">Custom Package</option>
-                    <option value="feedback">Feedback</option>
-                  </select>
-                </div>
-              </div>
-
-              <div>
-                <label className="block text-sm font-semibold text-[#161920] mb-2">
-                  Message
-                </label>
-                <textarea
-                  name="message"
-                  value={formData.message}
-                  onChange={handleChange}
-                  required
-                  rows={5}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-[#3cb371] transition-colors resize-none"
-                  placeholder="Tell us about your travel dreams..."
-                />
-              </div>
-
-              <Button
-                type="submit"
-                className="w-full h-12 bg-[#3cb371] hover:bg-[#2ea05e] text-white font-bold rounded-full transition-colors"
+      <section className="w-full flex  px-4 sm:px-6 md:px-12 lg:px-20 py-12 md:py-16 bg-gray-50">
+        <div className="max-w-6xl mx-auto ">
+          <div className="flex justify-center gap-6">
+            {contactInfo.map((info, index) => (
+              <div
+                key={index}
+                className="bg-zinc-100 rounded-lg p-10 shadow-sm hover:shadow-md transition-shadow"
               >
-                Send Message
-              </Button>
-            </form>
-
-            <div className="space-y-8">
-              <div className="bg-[#f9f9f9] p-8 rounded-2xl">
-                <h3 className="text-2xl font-bold text-[#161920] mb-4">Quick Response</h3>
-                <p className="text-[#555555] mb-4">
-                  We typically respond to inquiries within 24 hours. For urgent matters, please call us directly.
-                </p>
-                <div className="space-y-2">
-                  <p className="text-[#555555]">
-                    <span className="font-semibold">Headquarters:</span> Available 9AM-6PM EST
-                  </p>
-                  <p className="text-[#555555]">
-                    <span className="font-semibold">Support Team:</span> Available 24/7 during your travels
-                  </p>
+                <div className="flex items-start gap-4">
+                  <div className="mt-1">{info.icon}</div>
+                  <div className="flex-1">
+                    <h3 className="font-semibold text-gray-900 mb-2">
+                      {info.title}
+                    </h3>
+                    <p className="text-gray-600 text-sm">{info.value}</p>
+                  </div>
                 </div>
               </div>
-
-              <div className="bg-[#f9f9f9] p-8 rounded-2xl">
-                <h3 className="text-2xl font-bold text-[#161920] mb-4">Follow Us</h3>
-                <p className="text-[#555555] mb-6">
-                  Stay updated with our latest destinations and travel tips on social media.
-                </p>
-                <div className="flex gap-4">
-                  {["Facebook", "Instagram", "Twitter", "LinkedIn"].map((social) => (
-                    <a
-                      key={social}
-                      href="#"
-                      className="inline-block px-4 py-2 bg-[#3cb371] hover:bg-[#2ea05e] text-white rounded-lg font-semibold text-sm transition-colors"
-                    >
-                      {social}
-                    </a>
-                  ))}
-                </div>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </section>
 
+      {/* Map Section */}
+      <section className="w-full mt-6 h-96 md:h-[500px] bg-gray-100">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d506581.01090487954!2d80.678981!3d7.279002!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae361652e1cfc55%3A0xe8bfbbcde7f3aea1!2sDiferancia%20Tours%20(Pvt)%20Ltd!5e0!3m2!1sen!2sus!4v1769700603433!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+          width="100%"
+          height="100%"
+          style={{ border: 0 }}
+          allowFullScreen
+          loading="lazy"
+          referrerPolicy="no-referrer-when-downgrade"
+          className="w-full h-full"
+        />
+      </section>
+
+      {/* Contact Info Cards */}
+
+
+      {/* Get In Touch Section */}
+      <section className="w-full px-4 sm:px-6 md:px-12 lg:px-20 py-12 md:py-20">
+        <div className="max-w-6xl mx-auto">
+          {/* Header */}
+          <div className="text-center mb-12 md:mb-16">
+            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+              Get In Touch
+            </h1>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              Get in touch for personalized assistance. We're here to help and provide solutions tailored to your requirements.
+            </p>
+          </div>
+
+          {/* Form Container */}
+          <div className="bg-gray-100 rounded-lg p-8 md:p-12  mx-auto">
+            <form onSubmit={handleSubmit} className="space-y-6">
+              {/* Name Row */}
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                  <input
+                    type="text"
+                    name="name"
+                    placeholder="First Name*"
+                    value={formData.name}
+                    onChange={handleChange}
+                    className="w-full px-4 py-3 bg-white border border-gray-200 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500 placeholder-gray-400"
+                    required
+                  />
+                </div>
+                <div>
+                  <input
+                    type="text"
+                    placeholder="Last Name*"
+                    className="w-full px-4 py-3 bg-white border border-gray-200 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500 placeholder-gray-400"
+                    required
+                  />
+                </div>
+              </div>
+
+              {/* Phone and Email Row */}
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                  <input
+                    type="tel"
+                    name="phone"
+                    placeholder="Phone*"
+                    value={formData.phone}
+                    onChange={handleChange}
+                    className="w-full px-4 py-3 bg-white border border-gray-200 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500 placeholder-gray-400"
+                    required
+                  />
+                </div>
+                <div>
+                  <input
+                    type="email"
+                    name="email"
+                    placeholder="Email*"
+                    value={formData.email}
+                    onChange={handleChange}
+                    className="w-full px-4 py-3 bg-white border border-gray-200 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500 placeholder-gray-400"
+                    required
+                  />
+                </div>
+              </div>
+
+              {/* Subject */}
+              <div>
+                <input
+                  type="text"
+                  name="subject"
+                  placeholder="Subject*"
+                  value={formData.subject}
+                  onChange={handleChange}
+                  className="w-full px-4 py-3 bg-white border border-gray-200 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500 placeholder-gray-400"
+                  required
+                />
+              </div>
+
+              {/* Message */}
+              <div>
+                <textarea
+                  name="message"
+                  placeholder="Write your message"
+                  value={formData.message}
+                  onChange={handleChange}
+                  rows={6}
+                  className="w-full px-4 py-3 bg-white border border-gray-200 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500 placeholder-gray-400 resize-none"
+                />
+              </div>
+
+              {/* Submit Button */}
+              <Button
+                type="submit"
+                className="w-full bg-green-500 hover:bg-green-600 text-white font-semibold py-3 rounded-full text-lg transition-colors"
+              >
+                Send Message <span className="ml-2">→</span>
+              </Button>
+            </form>
+          </div>
+        </div>
+      </section>
+      <section className="w-full relative py-8 md:py-12">
+        <div className="flex flex-wrap w-full items-center justify-center gap-6 md:gap-10 lg:gap-14 px-4 sm:px-6 md:px-12">
+          {[
+            {
+              src: "https://www.diferanciatours.com/assets/img/bg-img/company-logo1.png",
+              alt: "Airbnb",
+            },
+            {
+              src: "https://www.diferanciatours.com/assets/img/bg-img/company-logo2.png",
+              alt: "Booking.com",
+            },
+            {
+              src: "https://www.diferanciatours.com/assets/img/bg-img/company-logo3.png",
+              alt: "Trip.com",
+            },
+            {
+              src: "https://www.diferanciatours.com/assets/img/bg-img/company-logo4.png",
+              alt: "Expedia",
+            },
+            {
+              src: "https://www.diferanciatours.com/assets/img/bg-img/company-logo5.png",
+              alt: "Tripadvisor",
+            },
+            {
+              src: "https://www.diferanciatours.com/assets/img/bg-img/company-logo6.png",
+              alt: "Agoda",
+            },
+          ].map((logo, index) => (
+            <img
+              key={index}
+              src={logo.src}
+              alt={logo.alt}
+              className="w-24 sm:w-28 md:w-32 h-auto object-contain transition-transform duration-300 hover:scale-110 cursor-pointer"
+            />
+          ))}
+        </div>
+      </section>
       <FooterSection />
     </div>
   );
