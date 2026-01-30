@@ -55,7 +55,7 @@ export const PopularActivitySection = (): JSX.Element => {
         <header className="flex flex-wrap items-start justify-center w-full">
           <div className="flex flex-col w-full items-center pt-0 md:pt-6 lg:pt-12 pb-0 px-3">
             <div className="flex flex-col items-center pt-0 pb-1 px-0 w-full">
-            <h2 className=" font-normal text-[#3cb371] text-2xl md:text-3xl lg:text-[42px] text-center tracking-[0] leading-tight">
+            <h2 className="font-normal text-[#3cb371] text-2xl md:text-3xl lg:text-[42px] text-center tracking-[0] leading-tight">
                 Popular Activities
               </h2>
             </div>
