@@ -14,11 +14,11 @@ export const Navbar = (): JSX.Element => {
     { label: "ABOUT US", href: "/about" },
     {
       label: "DESTINATIONS",
-      href: "/destinations",
+      href: "/#",
       hasDropdown: true,
       submenu: [
-        { label: "Inbound", href: "#" },
-        { label: "Outbound", href: "#" },
+        { label: "Inbound", href: "/inbound" },
+        { label: "Outbound", href: "/outbound" },
        
       ],
     },
