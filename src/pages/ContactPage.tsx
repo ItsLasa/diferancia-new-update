@@ -73,7 +73,7 @@ export const ContactPage = (): JSX.Element => {
           { label: "Home", href: "/" },
           { label: "Packages" },
         ]}
-        backgroundImage="https://www.diferanciatours.com/assets/img/bg-img/127.jpg"
+        backgroundImage="https://www.diferanciatours.com/assets/img/bg-img/97.jpg"
       />
 
       <section className="w-full flex  px-4 sm:px-6 md:px-12 lg:px-20 py-12 md:py-16 bg-gray-50">
