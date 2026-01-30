@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { ChevronRight, Mail, MessageCircle, Phone, ArrowLeft, ArrowRight } from "lucide-react";
+import { ChevronRight, Mail, MessageCircle, Phone, ArrowLeft, ArrowRight, MessageCircleMore } from "lucide-react";
 import { AboutUsSection } from "../screens/ElementLight/sections/AboutUsSection";
 import { DestinationsOverviewSection } from "../screens/ElementLight/sections/DestinationsOverviewSection";
 import { FoodExperienceSection } from "../screens/ElementLight/sections/FoodExperienceSection/FoodExperienceSection";
@@ -63,24 +63,37 @@ export const HomePage = (): JSX.Element => {
           {/* left social icons bar */}
           <div className="hidden md:flex flex-col items-center gap-3 absolute left-0 top-1/2 -translate-y-1/2">
             <div className="w-px h-16 bg-white/10 mb-2" />
-            <button
-              type="button"
+            <a
+              href="tel:+94772250223"
+              title="Call us"
               className="flex items-center justify-center w-9 h-9 rounded-full bg-black/40 border border-white/10 text-white hover:bg-[#3cb371] transition-colors"
             >
               <Phone className="w-4 h-4" />
-            </button>
-            <button
-              type="button"
+            </a>
+            <a
+              href="mailto:support@diferanciatours.com"
+              title="Email us"
               className="flex items-center justify-center w-9 h-9 rounded-full bg-black/40 border border-white/10 text-white hover:bg-[#3cb371] transition-colors"
             >
               <Mail className="w-4 h-4" />
-            </button>
-            <button
-              type="button"
+            </a>
+            <a
+              href="https://m.me/profile.php?id=100063546514111"
+              title="Send message"
               className="flex items-center justify-center w-9 h-9 rounded-full bg-black/40 border border-white/10 text-white hover:bg-[#3cb371] transition-colors"
             >
               <MessageCircle className="w-4 h-4" />
-            </button>
+            </a>
+
+            <a
+              href="https://wa.me/94772250223"
+              target="_blank"
+              rel="noopener noreferrer"
+              title="Chat on WhatsApp"
+              className="flex items-center justify-center w-9 h-9 rounded-full bg-black/40 border border-white/10 text-white hover:bg-[#3cb371] transition-colors"
+            >
+              <MessageCircleMore className="w-4 h-4" />
+            </a>
             <div className="w-px h-16 bg-white/10 mt-2" />
           </div>
 
@@ -89,7 +102,7 @@ export const HomePage = (): JSX.Element => {
               <h1 className="w-full font-extrabold text-white text-3xl sm:text-4xl md:text-5xl lg:text-[52px] xl:text-[60px] leading-tight drop-shadow-lg">
                 DIFERANCIA TOURS
               </h1>
-              <p className="w-full font-semibold text-[#3cb371] text-xl sm:text-2xl md:text-[26px] leading-tight drop-shadow-md">
+              <p className="w-full font-semibold text-green-400 text-xl sm:text-2xl md:text-[26px] leading-tight drop-shadow-md">
                 Journey beyond the Happy
               </p>
               <div className="flex flex-wrap items-center gap-4 pt-2">
@@ -137,11 +150,56 @@ export const HomePage = (): JSX.Element => {
         </div>
       </section>
 
-      <AboutUsSection />
-      <VideoSection/>
-      <DestinationsOverviewSection />
-      <FoodExperienceSection />
-      <PopularActivitySection />
+      
+    
+          <AboutUsSection />
+       
+
+      
+     
+        
+        
+          <VideoSection />
+        
+
+      <div
+        className="relative bg-cover bg-center bg-fixed"
+        style={{
+          backgroundImage:
+            "url(https://images.unsplash.com/photo-1566296314736-6eaac1ca0cb9?q=80&w=928&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)",
+        }}
+      >
+        <div className="absolute inset-0 bg-black/30" />
+        <div className="relative">
+          <DestinationsOverviewSection />
+        </div>
+      </div>
+
+      <div
+        className="relative bg-cover bg-center bg-fixed"
+        style={{
+          backgroundImage:
+            "url(https://plus.unsplash.com/premium_photo-1695297516698-fd7a320a55e5?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)",
+        }}
+      >
+        <div className="absolute inset-0 bg-black/40" />
+        <div className="relative">
+          <FoodExperienceSection />
+        </div>
+      </div>
+
+      <div
+        className="relative bg-cover bg-center bg-fixed"
+        style={{
+          backgroundImage:
+            "url(https://www.diferanciatours.com/assets/img/bg-img/body-bg-img2.jpg)",
+        }}
+      >
+        <div className="absolute inset-0 bg-black/40" />
+        <div className="relative">
+          <PopularActivitySection />
+        </div>
+      </div>
 
       <section className="w-full relative py-8 md:py-12">
         <div className="flex flex-wrap w-full items-center justify-center gap-6 md:gap-10 lg:gap-14 px-4 sm:px-6 md:px-12">
