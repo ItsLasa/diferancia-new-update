@@ -33,7 +33,7 @@ export const Navbar = (): JSX.Element => {
   return (
     <nav className="fixed top-0 left-0 right-0 z-40 ">
       <div className="w-full px-4 sm:px-6 md:px-8 lg:px-12 py-4">
-        <div className="max-w-7xl mx-auto bg-white rounded-full px-6 md:px-8 py-4 flex items-center justify-between">
+        <div className="max-w-7xl mx-auto bg-white rounded-full px-6 md:px-8 py-5 flex items-center justify-between">
           <Link
             to="/"
             className="flex items-center gap-2 flex-shrink-0"
@@ -53,7 +53,7 @@ export const Navbar = (): JSX.Element => {
               <div key={index} className="relative group">
                 <Link
                   to={item.href}
-                  className={`flex items-center gap-1 font-semibold text-sm transition-colors ${
+                  className={`flex items-center gap-1 font-semibold text-base transition-colors ${
                     isActive(item.href)
                       ? "text-[#3cb371]"
                       : "text-[#161920] hover:text-[#3cb371]"
