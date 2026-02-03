@@ -16,7 +16,7 @@ export const PageHeader = ({
 }: PageHeaderProps): JSX.Element => {
   return (
     <div
-      className="relative w-full h-[300px] md:h-[400px] lg:h-[500px] bg-cover bg-center flex items-center justify-center"
+      className="relative w-full h-[300px] md:h-[400px] lg:h-[500px] bg-cover  bg-center flex items-center justify-center"
       style={{
         backgroundImage: backgroundImage
           ? `url(${backgroundImage})`
@@ -24,7 +24,7 @@ export const PageHeader = ({
       }}
     >
       {/* Dark overlay */}
-      <div className="absolute inset-0 bg-black/40"></div>
+      <div className="absolute inset-0 bg-black/60"></div>
 
       {/* Content */}
       <div className="relative z-10 text-center px-4">
