@@ -68,29 +68,31 @@ export const ContactPage = (): JSX.Element => {
     <div className="bg-white w-full ">
       <Navbar />
       <PageHeader
-        title="Packages"
+        title="About Us"
         breadcrumbs={[
           { label: "Home", href: "/" },
-          { label: "Packages" },
+          { label: "About Us" },
         ]}
         backgroundImage="https://www.diferanciatours.com/assets/img/bg-img/97.jpg"
       />
 
-      <section className="w-full flex  px-4 sm:px-6 md:px-12 lg:px-20 py-12 md:py-16 bg-gray-50">
-        <div className="max-w-6xl mx-auto ">
-          <div className="flex justify-center gap-6">
+      <section className="w-full px-4 sm:px-6 md:px-12 lg:px-20 py-12 md:py-16 bg-gray-50">
+        <div className="max-w-6xl mx-auto w-full">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
             {contactInfo.map((info, index) => (
               <div
                 key={index}
-                className="bg-zinc-100 rounded-lg p-10 shadow-sm hover:shadow-md transition-shadow"
+                className="bg-zinc-100 rounded-lg p-6 sm:p-8 md:p-10 shadow-sm hover:shadow-md transition-shadow"
               >
-                <div className="flex items-start gap-4">
-                  <div className="mt-1">{info.icon}</div>
-                  <div className="flex-1">
-                    <h3 className="font-semibold text-gray-900 mb-2">
+                <div className="flex items-start gap-3 sm:gap-4">
+                  <div className="mt-1 flex-shrink-0">{info.icon}</div>
+                  <div className="flex-1 min-w-0">
+                    <h3 className="font-semibold text-gray-900 mb-2 text-sm sm:text-base">
                       {info.title}
                     </h3>
-                    <p className="text-gray-600 text-sm">{info.value}</p>
+                    <p className="text-gray-600 text-xs sm:text-sm break-words">
+                      {info.value}
+                    </p>
                   </div>
                 </div>
               </div>
@@ -100,9 +102,9 @@ export const ContactPage = (): JSX.Element => {
       </section>
 
       {/* Map Section */}
-      <section className="w-full mt-6 h-96 md:h-[500px] bg-gray-100">
+      <section className="w-full mt-6 md:mt-8 h-64 sm:h-80 md:h-96 lg:h-[500px] bg-gray-100">
         <iframe
-          src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d506581.01090487954!2d80.678981!3d7.279002!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae361652e1cfc55%3A0xe8bfbbcde7f3aea1!2sDiferancia%20Tours%20(Pvt)%20Ltd!5e0!3m2!1sen!2sus!4v1769700603433!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+          src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d506581.01090487954!2d80.678981!3d7.279002!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae361652e1cfc55%3A0xe8bfbbcde7f3aea1!2sDiferancia%20Tours%20(Pvt)%20Ltd!5e0!3m2!1sen!2sus!4v1769700603433!5m2!1sen!2sus"
           width="100%"
           height="100%"
           style={{ border: 0 }}
@@ -209,7 +211,7 @@ export const ContactPage = (): JSX.Element => {
               {/* Submit Button */}
               <Button
                 type="submit"
-                className="w-full bg-green-500 hover:bg-green-600 text-white font-semibold py-3 rounded-full text-lg transition-colors"
+                className="w-[90%] ml-11 bg-green-500 hover:bg-green-600 text-white font-semibold py-7 rounded-full text-lg transition-colors"
               >
                 Send Message <span className="ml-2">→</span>
               </Button>
