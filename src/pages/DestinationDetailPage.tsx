@@ -253,7 +253,7 @@ export const DestinationDetailPage = (): JSX.Element => {
       </section>
 
       {/* Additional Info Section */}
-      <section className="w-full px-4 sm:px-6 md:px-12 lg:px-20 py-12 md:py-16 bg-gray-50">
+      {/* <section className="w-full px-4 sm:px-6 md:px-12 lg:px-20 py-12 md:py-16 bg-gray-50">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-8">Plan Your Visit</h2>
           
@@ -288,7 +288,7 @@ export const DestinationDetailPage = (): JSX.Element => {
             </Button>
           </div>
         </div>
-      </section>
+      </section> */}
 
       <FooterSection />
     </div>
