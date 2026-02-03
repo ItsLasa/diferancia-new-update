@@ -7,22 +7,23 @@ import { PopularActivitySection } from "../screens/ElementLight/sections/Popular
 import { FooterSection } from "../screens/ElementLight/sections/FooterSection";
 import { VideoSection } from "../screens/ElementLight/sections/VideoSection";
 
+// Import images as modules
+import slider1 from "../assets/slider_1.jpg"
+import slider2 from "../assets/slider_2.jpg"
+import slider3 from "../assets/slider_3.jpg"
+import slider4 from "../assets/slider_4.jpg"
 const heroSlides = [
   {
-    image:
-      "https://www.diferanciatours.com/assets/img/bg-img/slider_1.jpg",
+    image: slider1,
   },
   {
-    image:
-      "https://www.diferanciatours.com/assets/img/bg-img/slider_2.jpg",
+    image: slider2,
   },
   {
-    image:
-      "https://www.diferanciatours.com/assets/img/bg-img/slider_3.jpg",
+    image: slider3,
   },
   {
-    image:
-      "https://www.diferanciatours.com/assets/img/bg-img/slider_4.jpg",
+    image: slider4,
   },
 ];
 
