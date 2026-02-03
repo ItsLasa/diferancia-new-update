@@ -64,7 +64,7 @@ export const HomePage = (): JSX.Element => {
           <div className="hidden md:flex flex-col items-center gap-3 absolute left-0 top-1/2 -translate-y-1/2">
             <div className="w-px h-16 bg-white/10 mb-2" />
             <a
-              href="tel:+94772250223"
+            href="tel:+94772250223"
               title="Call us"
               className="flex items-center justify-center w-9 h-9 rounded-full bg-black/40 border border-white/10 text-white hover:bg-[#3cb371] transition-colors"
             >
