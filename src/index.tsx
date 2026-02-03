@@ -12,6 +12,7 @@ import { Button } from "./components/ui/button";
 import { useState, useEffect } from "react";
 import { Outbound } from "./pages/Outbound";
 import { Inbound } from "./pages/Inbound";
+import { DestinationDetailPage } from "./pages/DestinationDetailPage";
 
 const App = (): JSX.Element => {
   const [showScroll, setShowScroll] = useState(false);
@@ -39,8 +40,9 @@ const App = (): JSX.Element => {
           <Route path="/destinations" element={<DestinationsPage />} />
           <Route path="/packages" element={<PackagesPage />} />
           <Route path="/contact" element={<ContactPage />} />
-            <Route path="/outbound" element={<Outbound />} />
-              <Route path="/inbound" element={<Inbound/>} />
+          <Route path="/outbound" element={<Outbound />} />
+          <Route path="/inbound" element={<Inbound/>} />
+          <Route path="/destination/:destinationId" element={<DestinationDetailPage />} />
         </Routes>
 
         {showScroll && (
