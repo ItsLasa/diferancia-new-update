@@ -1,3 +1,5 @@
+import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { FooterSection } from "../screens/ElementLight/sections/FooterSection";
 import { Button } from "../components/ui/button";
 import { Navbar } from "../components/Navbar";
@@ -63,6 +65,8 @@ const destinations: Destination[] = [
 ];
 
 export const Outbound = (): JSX.Element => {
+  const navigate = useNavigate();
+
   return (
     <div className="bg-white w-full">
       <Navbar />
@@ -111,7 +115,11 @@ export const Outbound = (): JSX.Element => {
                   </h3>
                   <a
                     href={`#${destination.id}`}
-                    className="text-gray-500 hover:text-green-600 text-lg transition-colors inline-flex items-center"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      navigate(`/destination/${destination.id}`);
+                    }}
+                    className="text-gray-500 hover:text-green-600 text-lg transition-colors inline-flex items-center cursor-pointer"
                   >
                     Click to read more...
                     <span className="ml-2">→</span>
