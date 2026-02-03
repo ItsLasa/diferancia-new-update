@@ -10,7 +10,7 @@ export const AboutUsSection = (): JSX.Element => {
     <section className="flex flex-col w-full items-start py-12 md:py-16 lg:py-20 px-4 sm:px-6 md:px-12 lg:px-20 xl:px-32 relative">
       <div className="absolute w-[8.85%] top-[calc(50.00%_-_140px)] left-[81.15%] h-[280px] bg-[#f7921f] rounded-[280px] blur-[100px] opacity-50 hidden lg:block" />
 
-      <div className="flex flex-col lg:flex-row items-center justify-center gap-8 lg:gap-12 relative self-stretch w-full max-w-7xl mx-auto">
+      <div className="flex flex-col  lg:flex-row items-center justify-center gap-8 lg:gap-12 relative self-stretch w-full max-w-7xl mx-auto">
         <div className="relative w-full lg:w-1/2 flex justify-center">
           <div className="relative w-[90%] max-w-md">
             {/* big left image */}
@@ -59,7 +59,7 @@ export const AboutUsSection = (): JSX.Element => {
           </div>
         </div>
 
-        <div className="flex flex-col w-full lg:w-1/2 items-start">
+        <div className="flex flex-col w-full mt-8 lg:w-1/2 items-start">
           <div className="relative w-full">
             <div className="flex flex-col items-start mb-6">
               <h2 className=" font-normal text-[#3cb371] text-2xl md:text-3xl lg:text-[32px] tracking-[0] leading-tight">
