@@ -20,7 +20,7 @@ export const VideoSection = (): JSX.Element => {
   ];
 
   return (
-    <section className="w-full px-6 md:px-12 lg:px-24 py-16 space-y-24">
+    <section className="w-full bg-gray-50 px-6 md:px-12 lg:px-24 py-16 space-y-24">
 
       {/* SECTION 1 */}
       <div className="grid lg:grid-cols-2 gap-12 items-center">
