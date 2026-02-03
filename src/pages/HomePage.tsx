@@ -105,17 +105,17 @@ export const HomePage = (): JSX.Element => {
               <p className="w-full font-semibold text-green-400 text-xl sm:text-2xl md:text-[26px] leading-tight drop-shadow-md">
                 Journey beyond the Happy
               </p>
-              <div className="flex flex-wrap items-center gap-4 pt-2">
+              <div className="flex flex-wrap items-center gap-4 pt-3">
                 <a
                   href="/about"
-                  className="inline-flex items-center gap-2 px-7 py-3 rounded-full bg-[#3cb371] text-white text-sm md:text-base font-semibold shadow-lg hover:bg-[#35a063] transition-colors"
+                  className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-[#3cb371] text-white text-sm md:text-base font-semibold shadow-lg hover:bg-[#35a063] transition-colors"
                 >
                   About Us
                   <ChevronRight className="w-4 h-4" />
                 </a>
                 <a
                   href="/contact"
-                  className="inline-flex items-center gap-2 px-7 py-3 rounded-full bg-white text-[#111827] text-sm md:text-base font-semibold shadow-lg hover:bg-gray-100 transition-colors"
+                  className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-white text-[#111827] text-sm md:text-base font-semibold shadow-lg hover:bg-gray-100 transition-colors"
                 >
                   Contact Us
                   <ChevronRight className="w-4 h-4" />
