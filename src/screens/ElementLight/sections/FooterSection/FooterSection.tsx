@@ -1,6 +1,12 @@
 import { Separator } from "../../../../components/ui/separator";
 import { MapPin, Phone, Mail, MessageCircleMore, MessageCircle } from "lucide-react";
 import footerlogo from "../../../../assets/footer-logo.png";
+import f1 from "../../../../assets/footer1.jpg";
+import f2 from "../../../../assets/footer2.jpg";
+import f3 from "../../../../assets/footer3.jpg";
+import f4 from "../../../../assets/footer4.jpg";
+import f5 from "../../../../assets/footer5.jpg";
+import f6 from "../../../../assets/footer6.jpg";
 
 const contactInfo = [
   {
@@ -34,13 +40,12 @@ const quickLinksColumn2 = [
 ];
 
 const galleryImages = [
-  "https://www.diferanciatours.com/assets/img/bg-img/36.jpg",
-  "https://www.diferanciatours.com/assets/img/bg-img/37.jpg",
-  "https://www.diferanciatours.com/assets/img/bg-img/38.jpg",
-  "https://www.diferanciatours.com/assets/img/bg-img/39.jpg",
-  "https://www.diferanciatours.com/assets/img/bg-img/40.jpg",
-  "https://www.diferanciatours.com/assets/img/bg-img/41.jpg",
-
+  f1,
+  f2,
+  f3,
+  f4,
+  f5,
+  f6,
 ];
 
 export const FooterSection = (): JSX.Element => {
